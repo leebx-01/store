@@ -1,0 +1,26 @@
+server:
+  port: 8890
+spring:
+  application:
+    name: cart-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/leyou
+    username: root
+    password: root
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
+        min-idle: 0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
